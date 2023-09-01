@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="@color/activity_background"
+    >
+
+    <LinearLayout
+        android:id="@+id/topChatBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/chatBackImage"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:onClick="backOnClick"
+            android:rotation="180"
+            android:src="@drawable/arrow"
+            android:contentDescription="@string/back_arrow" />
+    </LinearLayout>
+
+    <!-- Список сообщений (предполагаем, что у вас будет список сообщений, реализованный RecyclerView) -->
+    <!-- Ваш код для RecyclerView здесь -->
+
+    <!-- Нижний блок с полем ввода текста и кнопкой -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="7dp">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:id="@+id/chat_image_view_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottomBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:animateLayoutChanges="true"
+            android:paddingVertical="10dp">
+
+            <EditText
+                android:id="@+id/messageEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:paddingHorizontal="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:hint="@string/message_text"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/edittext_rounded_border" />
+
+            <ImageButton
+                android:id="@+id/fileAddButton"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_settings_black"
+                tools:ignore="ImageContrastCheck" />
+
+            <ImageButton
+                android:id="@+id/sendButton"
+                android:layout_width="24dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/arrow"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

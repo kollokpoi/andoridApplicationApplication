@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Theme.Bottom.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right</item>
+    </style>
+
+    <style name="Widget.Theme.Bottom.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="exampleColor">@color/light_blue_400</item>
+    </style>
+
+    <style name="LoginEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/edittext_rounded_border</item>
+        <item name="android:paddingHorizontal">10dp</item>
+    </style>
+
+</resources>

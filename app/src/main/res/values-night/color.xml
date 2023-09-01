@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="textColor">@color/white</color>
+    <color name="activity_background">#171717</color>
+    <color name="accentTextColor">@color/black</color>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".AchieveActivity"
+    android:background="@color/activity_background"
+    android:scrollbars="none">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp">
+
+            <ImageView
+                android:id="@+id/achieve_back_image"
+                android:layout_width="30dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/back_arrow"
+                android:rotation="180"
+                android:src="@drawable/arrow"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/achieve_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/achieve_info_image"
+                android:layout_width="30dp"
+                android:layout_height="16dp"
+
+                android:contentDescription="@string/back_arrow"
+                android:rotation="180"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/achieve_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/achieve_image_count_holder"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true"
+                app:layout_constraintTop_toBottomOf="@+id/achieve_view_pager"
+                app:layout_constraintEnd_toEndOf="@+id/achieve_view_pager"
+                app:layout_constraintStart_toStartOf="@+id/achieve_view_pager">
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/achieve_item_square_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/achieve_square"
+                android:layout_marginBottom="6dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="6dp">
+
+                <TextView
+                    android:id="@+id/achieve_item_status_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/achieve_status" />
+
+                <Spinner
+                    android:id="@+id/achieve_item_status_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/achieve_accepted" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/achieve_item_description_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/achieve_descriprion" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
